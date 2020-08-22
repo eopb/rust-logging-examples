@@ -9,7 +9,8 @@ fn main() {
         .with_max_level(Level::TRACE)
         .finish();
 
-    // Subscribers can be used for lots of things. This line set out subscriber globally.
+    // Subscribers can be used for lots of things. This line set up a subscriber globally.
+    //
     // The expect method is a standard way of handling errors in Rust.
     tracing::subscriber::set_global_default(subscriber).expect("no global subscriber has been set");
 
@@ -18,7 +19,7 @@ fn main() {
 
     // Rust does not have first class support of variadic functions.
     // Rust often uses macros to simulate the same experience with extra powers.
-    // All macros have a `!` after the name.
+    // All macros have a `!` after their name.
     debug!(
         some_interesting_num = 5,
         "Someone trying to debug 🐛 this code may find this interesting",
