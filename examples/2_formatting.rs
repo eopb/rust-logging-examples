@@ -7,7 +7,7 @@ fn main() {
     // This creates a scope for where a subscriber is valid.
     // I would not use this in production but it is useful for this example.
     tracing::subscriber::with_default(subscriber, || {
-        warn!("Hello World");
+        warn!("Ohhh nice colours 🎨");
     });
 
     // Lets do a very simple style. No time and no colours.
@@ -18,7 +18,7 @@ fn main() {
         .finish();
 
     tracing::subscriber::with_default(subscriber, || {
-        warn!("Hello World");
+        warn!("As simple as possible");
     });
 
     // Lets use a JSON Lines output.
@@ -26,7 +26,7 @@ fn main() {
     let subscriber = tracing_subscriber::fmt().json().finish();
 
     tracing::subscriber::with_default(subscriber, || {
-        warn!("Hello World");
+        warn!("Nice and 🤖 robot friendly");
     })
 
     // Customization is infinite.

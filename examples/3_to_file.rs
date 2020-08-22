@@ -4,6 +4,7 @@ use tracing::{error, info, Level};
 fn main() {
     let subscriber = tracing_subscriber::fmt()
         .with_max_level(Level::TRACE)
+        // JSON will probably work best for files.
         .json()
         // We can write our logs anywhere that implements rust standard Writer trait.
         // Here we are creating a folder and adding log files in the form `example.log.yyyy-MM-dd-HH-mm`.
@@ -23,7 +24,6 @@ fn main() {
     // Lets log in a loop every second.
     loop {
         info!("Everything is going fine 🎉");
-
         error!("oh no everything went wrong 💣");
 
         thread::sleep(Duration::from_secs(1))

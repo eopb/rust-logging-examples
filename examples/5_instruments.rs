@@ -10,7 +10,7 @@ fn main() {
 
     tracing::subscriber::set_global_default(subscriber).expect("no global subscriber has been set");
 
-    info!("Starting up");
+    info!("Starting up 🚀");
 
     info!("The 6th fibonacci number is {}", nthfib(6))
 }
@@ -20,6 +20,8 @@ fn main() {
 
 // By default it captures all of the functions arguments and logs them as key value pairs.
 // It also works with async functions without weird overlapping scopes.
+//
+// As this function is run loads lets set its level to trace.
 #[instrument(level = "trace")]
 fn nthfib(n: u128) -> u128 {
     match n {

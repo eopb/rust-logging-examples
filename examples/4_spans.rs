@@ -25,7 +25,7 @@ fn main() {
     // We could also drop ourselves.
 
     // Spans can also have key value pairs.
-    let span = span!(Level::TRACE, "A new context", key = "value");
+    let span = span!(Level::TRACE, "A new context", feeling = "🙂");
     let enter = span.enter();
 
     trace!("This trace will be shown as part of a new context");
