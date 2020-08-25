@@ -23,7 +23,7 @@ fn main() {
 
     // Lets log in a loop every second.
     loop {
-        info!("Everything is going fine 🎉");
+        info!("Now everything is going fine 🎉");
         error!("oh no everything went wrong 💣");
 
         thread::sleep(Duration::from_secs(1))

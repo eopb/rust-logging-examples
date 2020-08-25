@@ -20,7 +20,7 @@ fn main() {
         let _enter = span.enter();
 
         trace!("This trace will be shown as part of an interesting context")
-    } // Enter is dropped by rust here because the scope is closed. This exits the span.
+    } // _enter is dropped by rust here because the scope is closed. This exits the span.
 
     // We could also drop ourselves.
 
