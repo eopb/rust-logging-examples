@@ -1,0 +1,2 @@
+/examples/** -linguist-documentation
+*.rs linguist-language=Rust
